@@ -9,7 +9,7 @@ const {
   deleteItem
 } = require('../../controllers/amazon');
 
-// SKU lookup
+// SKU lookup (must be before :id route)
 router.get('/items/sku/:sku', getItemBySku);
 
 // CRUD operations

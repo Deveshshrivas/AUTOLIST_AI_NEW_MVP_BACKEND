@@ -2,6 +2,8 @@
 const crudController = require('./crudController');
 const lookupController = require('./lookupController');
 const syncController = require('./syncController');
+const mapController = require('./mapController');
+const analysisController = require('./analysisController');
 
 module.exports = {
   // CRUD operations
@@ -11,5 +13,11 @@ module.exports = {
   ...lookupController,
   
   // Sync operations
-  ...syncController
+  ...syncController,
+  
+  // Map operations
+  ...mapController,
+  
+  // Analysis operations
+  ...analysisController
 };

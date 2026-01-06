@@ -15,10 +15,10 @@ router.get('/test', (req, res) => {
   });
 });
 
-// Mount sub-routes
-router.use('/', crudRoutes);
-router.use('/', searchRoutes);
+// Mount sub-routes (order matters - more specific routes first)
+router.use('/', searchRoutes);  // Must be before crud routes
 router.use('/', bulkRoutes);
 router.use('/', sectionRoutes);
+router.use('/', crudRoutes);    // General routes last
 
 module.exports = router;
